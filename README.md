@@ -1,3 +1,44 @@
 # fis-preprocessor-smarty-hmr
 
-fis preprocessor to smarty for start a remote hmr server
+fis preprocessor to smarty for start a remote hmr server.
+
+## Usage
+
+### Setting fis-conf.js
+
+1. Setting hotreload.port
+
+```js
+// Example
+fis.set('hotreload.port', '8888');
+```
+
+2. Setting to smarty
+
+By setting `config` to fis preprocessor. May contain multiple pages.
+
+```js
+// Example
+fis.match('*.tpl', {
+    preprocessor: fis.plugin('smarty-hmr', {
+        config: [{
+            pagePath: 'page/index.tpl',
+            bundleName: 'bundle.js',
+            blockName: 'top-head-extend',
+            exclude: 'a.js',
+            // exclude: ['a.js'], ['b.js'],            
+            valid: true
+        }]
+    }),
+});
+```
+
+## Config item options
+
+|options|description|type|required|default|
+|---|---|---|---|---|
+|pagePath|path to page| String |`YES` | - |
+|bundleName|bundle file name | String | `YES` | - |
+|blockName|which smarty block to inject bundle file |String| `OPTIONAL` | `top-head-extend` |
+|exclude| exclude js name | String or Array | `OPTIONAL` | - |
+|valid|if this rules is valid| Boolean | `OPTIONAL` | true |

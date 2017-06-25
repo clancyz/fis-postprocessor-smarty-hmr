@@ -40,10 +40,10 @@ module.exports = function(content, file, settings){
     for (var i = 0, length = config.length; i < length; i++) {
         var item = config[i];
         // see this page exists or not
-        if (!fis.util.exists(item.tpl)) {
+        if (!fis.util.exists(item.pagePath) || item.valid === false) {
             continue;
         }
-        var reg = new RegExp(item.tpl + '$', 'i');
+        var reg = new RegExp(item.pagePath + '$', 'i');
         if(reg.test(settings.filename)) {
             match = item;
             break;
@@ -79,7 +79,6 @@ module.exports = function(content, file, settings){
     // see if settings contains blockName 
     var blockName = matchItem.blockName || 'top-head-extend';
     var blockExp = new RegExp('(^{[^}]*block[^}]*' + blockName + '[^}]*%[^}]*}$)', 'gm');
-    // var blockExp = /^{[^}]*block[^}]*top-head-extend[^}]*%[^}]*}$/gm;
     var hotURL = 'http://' + ip + ':' + port + '/' + match.bundleName;
     var hotScript = '{%script%}require.loadJs(\"' + hotURL +'\"){%/script%}';
     return content.replace(blockExp, '$1\r\n\t' + hotScript);
