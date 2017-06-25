@@ -33,7 +33,7 @@ fis.match('*.tpl', {
 });
 ```
 
-## Config item options
+### Config item options
 
 |options|description|type|required|default|
 |---|---|---|---|---|
@@ -43,7 +43,7 @@ fis.match('*.tpl', {
 |exclude| exclude js name | String or Array | `OPTIONAL` | - |
 |valid|if this rules is valid| Boolean | `OPTIONAL` | true |
 
-## Starting via fis release 
+### Starting via fis release 
 
 You need to set env `HOT=true` and start `fis release`: 
 
