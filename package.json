@@ -1,0 +1,24 @@
+{
+  "name": "fis-preprocessor-smarty-hmr",
+  "version": "0.1.0",
+  "description": "fis preprocessor to smarty for start a remote hmr server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clancyz/fis-preprocessor-smarty-hmr.git"
+  },
+  "keywords": [
+    "fis",
+    "preprocessor",
+    "hmr"
+  ],
+  "author": "clancyz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/clancyz/fis-preprocessor-smarty-hmr/issues"
+  },
+  "homepage": "https://github.com/clancyz/fis-preprocessor-smarty-hmr#readme"
+}
