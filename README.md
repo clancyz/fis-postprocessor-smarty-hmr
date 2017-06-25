@@ -42,3 +42,26 @@ fis.match('*.tpl', {
 |blockName|which smarty block to inject bundle file |String| `OPTIONAL` | `top-head-extend` |
 |exclude| exclude js name | String or Array | `OPTIONAL` | - |
 |valid|if this rules is valid| Boolean | `OPTIONAL` | true |
+
+## Starting via fis release 
+
+You need to set env `HOT=true` and start `fis release`: 
+
+Intergration in `npm script`:
+
+```bash
+$ npm i cross-env -S
+```
+
+```js
+"scripts": {
+  "release": "cross-env HOT=true fis3 release",
+}
+```
+
+By running command in cli:
+
+```bash
+$ npm run release -- [fis3 media]
+```
+
