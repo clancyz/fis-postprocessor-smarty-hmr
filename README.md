@@ -26,7 +26,7 @@ fis.match('*.tpl', {
             bundleName: 'bundle.js',
             blockName: 'top-head-extend',
             exclude: 'a.js',
-            // exclude: ['a.js'], ['b.js'],            
+            // exclude: ['a.js', 'b.js'],            
             valid: true
         }]
     }),
