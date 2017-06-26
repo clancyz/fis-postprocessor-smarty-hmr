@@ -1,6 +1,6 @@
 {
   "name": "fis-preprocessor-smarty-hmr",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "fis preprocessor to smarty for start a remote hmr server",
   "main": "index.js",
   "scripts": {

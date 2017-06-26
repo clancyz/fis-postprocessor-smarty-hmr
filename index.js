@@ -33,7 +33,7 @@ module.exports = function(content, file, settings){
                 exclude.push(config.exclude);
                 break;
             case 'Array':
-                exclude.concat(config.exclude);
+                exclude = exclude.concat(config.exclude);
                 break;
         }
     }
