@@ -9,9 +9,9 @@
 
 
 module.exports = function(content, file, settings){
-    if (!process.env.HOT) {
-        return content;
-    }
+    // if (!process.env.HOT) {
+    //     return content;
+    // }
     var config = settings.config;
 
     // get local ip
@@ -20,7 +20,12 @@ module.exports = function(content, file, settings){
     // get port 
     var port = fis.config.get('hotreload.port');
 
-    if (!ip || !port) {
+    if(!ip) {
+        fis.log.warn('Sorry, ip address not found');
+        return content;
+    }
+    if (!port) {
+        fis.log.warn('hotreload.port not found, please set in fis conf. Example: fis.set("hotreload.port", 2333)');
         return content;
     }
 
@@ -61,9 +66,9 @@ module.exports = function(content, file, settings){
 
     var requireRegex = /^({)?[^}]*require(.)?[^\n}]*(})?/gm;
 
-    var matchArr = content.match(requireRegex);
+    var matchArr = content.match(requireRegex) || [];
 
-    for(var j = 0, matchLength = matchArr.length; i < matchLength; i++) {
+    for(var j = 0, matchLength = matchArr.length; j < matchLength; j++) {
         var matchItem = matchArr[i];
         var needReplace = true;
         for (var k = 0, excludeLength = exclude.length; k < excludeLength; k ++) {
@@ -82,6 +87,9 @@ module.exports = function(content, file, settings){
     // see if settings contains blockName 
     var blockName = matchItem.blockName || 'top-head-extend';
     var blockExp = new RegExp('(^{[^}]*block[^}]*' + blockName + '[^}]*%[^}]*}$)', 'gm');
+    if (!content.match(blockName)) {
+        fis.log.warn('Cannot find match block in ' + settings.filename + '. Try to match blockName:' + blockName)
+    }
     var hotURL = 'http://' + ip + ':' + port + '/' + match.bundleName;
     var hotScript = '{%script%}require.loadJs(\"' + hotURL +'\"){%/script%}';
     return content.replace(blockExp, '$1\r\n\t' + hotScript);
@@ -114,7 +122,11 @@ function getIp() {
             return false;
         }
         return true;
-    })
+    });
+
+    if (ret === '') {
+        ret = ips[0];
+    }
     return ret;
 }
 
