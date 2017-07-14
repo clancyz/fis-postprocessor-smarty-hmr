@@ -1,6 +1,6 @@
-# fis-preprocessor-smarty-hmr
+# fis-postprocessor-smarty-hmr
 
-fis preprocessor to smarty for start a remote hmr server.
+fis postprocessor to smarty for start a remote hmr server.
 
 ## Usage
 
@@ -15,12 +15,12 @@ fis.set('hotreload.port', '8888');
 
 2. Setting to smarty
 
-By setting `config` to fis preprocessor. May contain multiple pages.
+By setting `config` to fis postprocessor. May contain multiple pages.
 
 ```js
 // Example
 fis.match('*.tpl', {
-    preprocessor: fis.plugin('smarty-hmr', {
+    postprocessor: fis.plugin('smarty-hmr', {
         config: [{
             pagePath: 'page/index.tpl',
             bundleName: 'bundle.js',

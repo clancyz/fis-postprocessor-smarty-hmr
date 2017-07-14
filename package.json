@@ -1,26 +1,26 @@
 {
-  "name": "fis-preprocessor-smarty-hmr",
-  "version": "0.1.4",
-  "description": "fis preprocessor to smarty for start a remote hmr server",
+  "name": "fis-postprocessor-smarty-hmr",
+  "version": "0.1.0",
+  "description": "fis postprocessor to smarty for start a remote hmr server",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/clancyz/fis-preprocessor-smarty-hmr.git"
+    "url": "git+https://github.com/clancyz/fis-postprocessor-smarty-hmr.git"
   },
   "keywords": [
     "fis",
-    "preprocessor",
+    "postprocessor",
     "hmr"
   ],
   "author": "clancyz",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/clancyz/fis-preprocessor-smarty-hmr/issues"
+    "url": "https://github.com/clancyz/fis-postprocessor-smarty-hmr/issues"
   },
-  "homepage": "https://github.com/clancyz/fis-preprocessor-smarty-hmr#readme",
+  "homepage": "https://github.com/clancyz/fis-postprocessor-smarty-hmr#readme",
   "devDependencies": {
     "eslint": "^4.2.0",
     "eslint-config-standard": "^10.2.1",

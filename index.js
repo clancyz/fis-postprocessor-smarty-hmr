@@ -1,7 +1,7 @@
 /*
- * fis-preprocessor-smarty-hmr
+ * fis-postprocessor-smarty-hmr
  * @author clancyz
- * https://github.com/clancyz/fis-preprocessor-smarty-hmr
+ * https://github.com/clancyz/fis-postprocessor-smarty-hmr
  * http://fis.baidu.com/
  */
 
