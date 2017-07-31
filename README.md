@@ -1,6 +1,6 @@
 # fis-postprocessor-smarty-hmr
 
-fis postprocessor to smarty for start a remote hmr server.
+fis postprocessor to smarty for connect a remote page with local hmr server.
 
 ## Usage
 
