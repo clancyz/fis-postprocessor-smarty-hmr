@@ -4,6 +4,12 @@ fis postprocessor to smarty for start a remote hmr server.
 
 ## Usage
 
+### Installation
+
+```bash
+$ npm i fis-postprocessor-smarty-hmr
+```
+
 ### Setting fis-conf.js
 
 1. Setting hotreload.port
