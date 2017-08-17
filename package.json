@@ -1,10 +1,10 @@
 {
   "name": "fis-postprocessor-smarty-hmr",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "fis postprocessor to smarty for start a remote hmr server",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -22,11 +22,15 @@
   },
   "homepage": "https://github.com/clancyz/fis-postprocessor-smarty-hmr#readme",
   "devDependencies": {
+    "chai": "^4.1.1",
     "eslint": "^4.2.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.1.0",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1"
+    "eslint-plugin-standard": "^3.0.1",
+    "fis3": "^3.4.34",
+    "fis3-smarty": "^1.1.16",
+    "mocha": "^3.5.0"
   }
 }
