@@ -31,6 +31,6 @@
 			async
 			('namespace:dist/static/app.js')
 
-
+		require('namespace:dist/static/app.js')
 	{%/script%}
 {%/block%}
