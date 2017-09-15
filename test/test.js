@@ -33,6 +33,9 @@ describe('Compile tpl in proprecessor', function() {
         }, {
           pagePath: 'test/inject-script-default-block/before.tpl',
           bundleName: env.entryjs
+        }, {
+          pagePath: 'test/block-name-contains-require/before.tpl',
+          bundleName: env.entryjs
         }],
       })
     });
@@ -62,5 +65,14 @@ describe('Compile tpl in proprecessor', function() {
     var expectedContent = _.replaceScript(expectedFile.getContent());
     expect(file.getContent()).to.equal(expectedContent);
   });
+
+  it('Should correctly parse blocks which name contains require', function () {
+    var file = fis.file(__dirname + '/block-name-contains-require/before.tpl');
+    fis.compile(file);
+    console.log(file.getContent());
+    var expectedFile = fis.file(__dirname + '/block-name-contains-require/after.tpl');
+    var expectedContent = _.replaceScript(expectedFile.getContent());
+    expect(file.getContent()).to.equal(expectedContent);
+  })
 
 });
