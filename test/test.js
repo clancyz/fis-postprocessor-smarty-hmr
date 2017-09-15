@@ -69,7 +69,6 @@ describe('Compile tpl in proprecessor', function() {
   it('Should correctly parse blocks which name contains require', function () {
     var file = fis.file(__dirname + '/block-name-contains-require/before.tpl');
     fis.compile(file);
-    console.log(file.getContent());
     var expectedFile = fis.file(__dirname + '/block-name-contains-require/after.tpl');
     var expectedContent = _.replaceScript(expectedFile.getContent());
     expect(file.getContent()).to.equal(expectedContent);
