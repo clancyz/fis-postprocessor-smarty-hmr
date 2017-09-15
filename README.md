@@ -1,6 +1,6 @@
 # fis-postprocessor-smarty-hmr
 
-<p align="center">
+<p align="left">
     <a href="https://www.npmjs.com/package/fis-postprocesscor-smarty-hmr"><img src="https://img.shields.io/npm/v/fis-postprocessor-smarty-hmr.svg" alt="Downloads"></a>
     <a href="https://www.npmjs.com/package/fis-postprocesscor-smarty-hmr"><img src="https://img.shields.io/npm/dm/fis-postprocessor-smarty-hmr.svg" alt="Version"></a>
     <a href="https://www.npmjs.com/package/fis-postprocesscor-smarty-hmr"><img src="https://img.shields.io/npm/l/fis-postprocessor-smarty-hmr.svg" alt="Licence"></a>
