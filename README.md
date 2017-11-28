@@ -35,7 +35,7 @@ By setting `config` to fis postprocessor. May contain multiple pages.
 // Example
 fis.match('*.tpl', {
     postprocessor: fis.plugin('smarty-hmr', {
-        // global exclude (fuzzy match)
+        // global exclude (fuzzy match), string or array, eg, ['bootstrap.css', 'animate.css']
         globalExcludeRequire: 'bootstrap.css',
         config: [{
             pagePath: 'page/index.tpl',
