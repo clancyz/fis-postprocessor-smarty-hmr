@@ -1,10 +1,10 @@
 {%extends file="common/page/layout.tpl"%}
 
 {%block name="top-head-extend"%}
-{%*SCRIPT_INSERT*%}
 	
 	
   {%*require src="http://rapx.com:8888/rap.plugin.js?projectId=23" type="js"*%}
+{%*SCRIPT_INSERT*%}
 {%/block%}
 
 {%block name="page-main"%}
