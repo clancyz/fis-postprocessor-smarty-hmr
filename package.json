@@ -1,6 +1,6 @@
 {
   "name": "fis-postprocessor-smarty-hmr",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "fis postprocessor to smarty for start a remote hmr server",
   "main": "lib/index.js",
   "scripts": {
